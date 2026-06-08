@@ -188,7 +188,7 @@ body {
 }
 
 .dismiss-btn:hover {
-  background: linear-gradient(135deg, hsl(4, 100%, 67%), hsl(345, 100%, 65%));
+  background: linear-gradient(135deg, hsl(4, 100%, 67%), hsl(128, 80%, 40%));
   box-shadow: 0 10px 20px rgba(255, 98, 87, 0.3);
 }
 
