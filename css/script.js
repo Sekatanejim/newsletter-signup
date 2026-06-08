@@ -1,3 +1,4 @@
+
 // Get DOM elements
 const signupCard = document.getElementById('signupCard');
 const successCard = document.getElementById('successCard');
