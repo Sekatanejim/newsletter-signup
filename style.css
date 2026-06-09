@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: hsl(234, 29%, 20%);
+  background-color: #242742;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,9 +14,8 @@ body {
   padding: 20px;
 }
 
-/* Sign-up Card */
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: white;
   border-radius: 36px;
   max-width: 930px;
   width: 100%;
@@ -38,13 +37,13 @@ body {
 .text-content h1 {
   font-size: 56px;
   font-weight: 700;
-  color: hsl(234, 29%, 20%);
+  color: #242742;
   margin-bottom: 24px;
 }
 
 .text-content > p {
   font-size: 16px;
-  color: hsl(234, 29%, 20%);
+  color: #242742;
   margin-bottom: 24px;
 }
 
@@ -59,11 +58,11 @@ body {
   gap: 16px;
   margin-bottom: 12px;
   font-size: 16px;
-  color: hsl(234, 29%, 20%);
+  color: #242742;
 }
 
 .benefits-list li::before {
-  content: url('../assets/images/icon-list.svg');
+  content: url('./assets/images/icon-list.svg');
   display: inline-block;
   width: 21px;
   height: 21px;
@@ -83,13 +82,13 @@ body {
 .label-row label {
   font-size: 12px;
   font-weight: 700;
-  color: hsl(234, 29%, 20%);
+  color: #242742;
 }
 
 .error-msg {
   font-size: 12px;
   font-weight: 700;
-  color: hsl(4, 100%, 67%);
+  color: #ff6154;
   display: none;
 }
 
@@ -97,39 +96,37 @@ body {
   width: 100%;
   padding: 16px 20px;
   border-radius: 12px;
-  border: 1px solid hsl(0, 0%, 58%);
+  border: 1px solid #ccc;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   outline: none;
-  transition: all 0.2s ease;
 }
 
 #emailInput:focus {
-  border-color: hsl(234, 29%, 20%);
+  border-color: #242742;
 }
 
 #emailInput.error-input {
-  border-color: hsl(4, 100%, 67%);
-  background-color: rgba(255, 98, 87, 0.1);
+  border-color: #ff6154;
+  background-color: rgba(255, 97, 84, 0.1);
 }
 
 .subscribe-btn {
   width: 100%;
   padding: 16px;
-  background-color: hsl(234, 29%, 20%);
+  background-color: #242742;
   color: white;
   border: none;
   border-radius: 12px;
   font-size: 16px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .subscribe-btn:hover {
-  background: linear-gradient(135deg, hsl(4, 100%, 67%), hsl(345, 100%, 65%));
-  box-shadow: 0 10px 20px rgba(255, 98, 87, 0.3);
+  background: linear-gradient(135deg, #ff6154, #ff7e6b);
+  box-shadow: 0 10px 20px rgba(255, 97, 84, 0.3);
 }
 
 .image-content {
@@ -142,9 +139,8 @@ body {
   display: block;
 }
 
-/* Success Card */
 .success-card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: white;
   border-radius: 36px;
   max-width: 500px;
   width: 100%;
@@ -161,14 +157,14 @@ body {
 .success-content h1 {
   font-size: 56px;
   font-weight: 700;
-  color: hsl(234, 29%, 20%);
+  color: #242742;
   margin-bottom: 24px;
   line-height: 1.1;
 }
 
 .success-content p {
   font-size: 16px;
-  color: hsl(234, 29%, 20%);
+  color: #242742;
   margin-bottom: 40px;
   line-height: 1.5;
 }
@@ -176,28 +172,25 @@ body {
 .dismiss-btn {
   width: 100%;
   padding: 16px;
-  background-color: hsl(234, 29%, 20%);
+  background-color: #242742;
   color: white;
   border: none;
   border-radius: 12px;
   font-size: 16px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .dismiss-btn:hover {
-  background: linear-gradient(135deg, hsl(4, 100%, 67%), hsl(345, 100%, 65%));
-  box-shadow: 0 10px 20px rgba(255, 98, 87, 0.3);
+  background: linear-gradient(135deg, #ff6154, #ff7e6b);
+  box-shadow: 0 10px 20px rgba(255, 97, 84, 0.3);
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .card {
     padding: 0;
     border-radius: 0;
-    max-width: 100%;
   }
 
   .card-content {
@@ -215,11 +208,6 @@ body {
 
   .image-content {
     width: 100%;
-  }
-
-  .image-content img {
-    width: 100%;
-    content: url('../assets/images/illustration-sign-up-mobile.svg');
   }
 
   .success-card {
