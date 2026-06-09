@@ -1,50 +1,33 @@
-const signupCard = document.getElementById('signupCard');
-const successCard = document.getElementById('successCard');
-const form = document.getElementById('signupForm');
-const emailInput = document.getElementById('emailInput');
+const form = document.getElementById('newsletterForm');
+const emailInput = document.getElementById('email');
 const errorMsg = document.getElementById('errorMsg');
-const submittedEmailSpan = document.getElementById('submittedEmail');
+const signupContainer = document.getElementById('signupContainer');
+const successContainer = document.getElementById('successContainer');
+const userEmailSpan = document.getElementById('userEmail');
 const dismissBtn = document.getElementById('dismissBtn');
 
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function showError() {
-    errorMsg.style.display = 'block';
-    emailInput.classList.add('error-input');
-}
-
-function hideError() {
-    errorMsg.style.display = 'none';
-    emailInput.classList.remove('error-input');
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    
     const email = emailInput.value.trim();
     
-    if (email === '') {
-        showError();
-    } else if (!emailPattern.test(email)) {
-        showError();
+    if (!email || !isValidEmail(email)) {
+        errorMsg.textContent = 'Valid email required';
+        emailInput.classList.add('error');
     } else {
-        hideError();
-        submittedEmailSpan.textContent = email;
-        signupCard.style.display = 'none';
-        successCard.style.display = 'block';
+        errorMsg.textContent = '';
+        emailInput.classList.remove('error');
+        userEmailSpan.textContent = email;
+        signupContainer.style.display = 'none';
+        successContainer.style.display = 'flex';
     }
 });
 
 dismissBtn.addEventListener('click', function() {
-    successCard.style.display = 'none';
-    signupCard.style.display = 'block';
+    successContainer.style.display = 'none';
+    signupContainer.style.display = 'flex';
     emailInput.value = '';
-    hideError();
-});
-
-emailInput.addEventListener('input', function() {
-    const email = emailInput.value.trim();
-    if (email !== '' && emailPattern.test(email)) {
-        hideError();
-    }
 });
